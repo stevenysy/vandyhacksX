@@ -3,36 +3,59 @@ html, body {
   width: 100vw;
 }
 
+body {
+  font-family: ethnocentric, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
 h1 {
-  margin: 0
+  margin: 0;
+  color: azure;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home h1 {
+  padding-top: 8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.home {
+.buttons a {
   color: azure;
+  text-decoration: none;
+}
+
+.card {
+  height: 8rem;
+  float: left;
+  padding-left: 1rem;
+}
+
+.hand-container {
+  height: 10rem;
+}
+
+.hand {
+  position: relative;
+  top: 10%;
+  left: 20px;
+}
+
+.hand-background-left {
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.hand-background-right {
+  position: relative;
+  top: 8%;
+  width: 100vw;
 }
