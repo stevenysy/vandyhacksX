@@ -17,7 +17,7 @@ export class Req0 extends Req {
 
 export class Req1 extends Req {
     constructor() {
-        this.reqList = [largerEqualToTen, fourN, fiveN, sixN];
+        this.reqList = [largerEqualToTen, fourN, fiveN, sixN, twoValuesBetweenOneAndNine];
     }
 }
 
@@ -88,7 +88,7 @@ function generateNum(number, lower, upper) {
     return numList;
 }
 
-function betweenAandB(num, a, b, numCard) {
+function nValuesBetweenAandB(num, a, b, numCard) {
     let numList = generateNum(num, a, b);
     check = false;
     num = numCard.getNum();
@@ -96,4 +96,26 @@ function betweenAandB(num, a, b, numCard) {
         check = check || (num == curNum);
     }
     return check;
+}
+
+function twoValuesBetweenOneAndNine(numCard) {
+    return nValuesBetweenAandB(2, 1, 9, numCard);
+}
+
+//level2
+
+function largerEqualToTwenty(numCard) {
+    return inclusivelyLargerThanN(20, numCard);
+}
+
+function tenN(numCard) {
+    return multipleOfN(10, numCard);
+}
+
+function equalN(n, numCard) {
+    return (numCard.getNum() == n);
+}
+
+function equalTwelve(numCard) {
+    return equalN(12, numCard);
 }

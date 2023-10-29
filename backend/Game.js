@@ -1,12 +1,16 @@
 import * as Hand from "./Hand.js"
 import * as Req from "./Req.js"
 import express from "express";
+import cors from "cors"
 
 const myHand = new Hand.Hand;
 
 // const express = require('express');
 
 const app = express();
+
+app.use(cors());
+app.use(express.json());
 
 app.get('/', (request, response) => {
     const { numCardsNeeded } = request.query;
