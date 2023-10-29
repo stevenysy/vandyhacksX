@@ -141,17 +141,36 @@ ul {
 }
 
 .reqs-list {
-  position: relative;
-  float: inline-end;
+  position: absolute;
   align-items: center;
   top: 24.5rem;
-  left: 0;
-  bottom: 0;
+  margin-left: 40rem;
 }
 
 .req-name {
   position: absolute;
   right: 6.5rem;
   margin-top: 1rem;
+  z-index: 3;
+}
+
+.enemy-attack-container {
+  width: 50vw;
+  float: right;
+}
+
+.enemy-attack {
+  position: absolute;
+  width: 35rem;
+  right: 20px;
+  top: 25px;
+  z-index: 2;
+}
+
+.enemy-attack-name {
+  position: relative;
+  font-size: 2.25rem;
+  top: 3rem;
+  right: 30px;
   z-index: 3;
 }

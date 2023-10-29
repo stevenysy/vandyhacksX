@@ -15,6 +15,7 @@ const Main = () => {
     "prime num",
     "div by 3",
   ]);
+  const [attack, setAttack] = useState("even num");
 
   return (
     <Routes>
@@ -30,6 +31,7 @@ const Main = () => {
             hp={hp}
             enemyHp={enemyHp}
             reqs={reqs}
+            attack={attack}
           />
         }
         // Component={Tutorial}

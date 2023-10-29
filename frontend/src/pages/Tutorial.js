@@ -2,8 +2,9 @@ import Hand from "../Hand.js";
 import HpBar from "../HpBar.js";
 import MainChar from "../MainChar";
 import EnemyHp from "../EnemyHp.js";
+import EnemyAttack from "../EnemyAttack.js";
 
-const Tutorial = ({ hand, setHand, hp, setHp, enemyHp, reqs }) => {
+const Tutorial = ({ hand, setHand, hp, setHp, enemyHp, reqs, attack }) => {
   // const reqs = [(num) => num % 2 === 0, (num) => num % 2 !== 0];
 
   // const checkReqs = function (num) {
@@ -21,6 +22,7 @@ const Tutorial = ({ hand, setHand, hp, setHp, enemyHp, reqs }) => {
   return (
     <>
       <HpBar hp={hp} setHp={setHp} />
+      <EnemyAttack attack={attack} />
       <MainChar hp={hp} />
       <Hand hand={hand} setHand={setHand} />
       <EnemyHp hp={enemyHp} reqs={reqs} />
