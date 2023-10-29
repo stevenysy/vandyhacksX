@@ -1,14 +1,19 @@
-export const fetchCards = async function (num) {
+export const fetchCards = function (num) {
+  let hand = [];
+
   const requestOptions = {
     method: "GET",
     redirect: "follow",
   };
 
-  fetch("/api/?numCardsNeeded=7", requestOptions)
+  fetch(`/api/?numCardsNeeded=${num}`, requestOptions)
     .then((response) => response.json())
     .then((result) => {
       const data = JSON.parse(result);
-      console.log(data.data.hand);
+      hand = data.data.hand;
+      console.log(hand);
     })
     .catch((error) => console.log("error", error));
+
+  return hand;
 };

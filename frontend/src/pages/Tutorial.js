@@ -9,13 +9,11 @@ import { useState } from "react";
 import CalcModal from "../CalcModal.js";
 
 try {
-  const data = await fetchCards(7);
+  const data = fetchCards(7);
   console.log(data);
 } catch (err) {
   console.error(err);
 }
-
-fetchCards().then((data) => console.log(data));
 
 const Tutorial = () => {
   const [hand, setHand] = useState([1, 2, 1, 2]);

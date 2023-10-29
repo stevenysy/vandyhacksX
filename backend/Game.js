@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (request, response) => {
+app.get("/api", (request, response) => {
   const myHand = new Hand.Hand();
   const { numCardsNeeded } = request.query;
   myHand.drawCards(numCardsNeeded);
@@ -29,5 +29,4 @@ app.get("/", (request, response) => {
 const port = 8000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
-  console.log(myHand);
 });

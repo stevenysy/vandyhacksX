@@ -21,7 +21,7 @@ const Main = () => {
     <Routes>
       <Route exact path="/" Component={Home}></Route>
       <Route exact path="/game" Component={Game}></Route>
-      <Route exact path="/tutorial" Component={Tutorial}></Route>
+      <Route exact path="/tutorial" element={<Tutorial />}></Route>
     </Routes>
   );
 };
