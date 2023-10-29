@@ -16,7 +16,7 @@ try {
 }
 
 const Tutorial = () => {
-  const [hand, setHand] = useState([1, 2, 1, 2]);
+  const [hand, setHand] = useState([1, 2, "times", 3, "plus", 4, 6]);
   const [hp, setHp] = useState(INIT_HP);
   const [enemyHp, setEnemyHp] = useState(INIT_ENEMY_HP);
   const [reqs, setReqs] = useState([
@@ -27,14 +27,34 @@ const Tutorial = () => {
   ]);
   const [attack, setAttack] = useState("even num");
   const [isCalculating, setIsCalculating] = useState(false);
+  const [operator, setOperator] = useState("");
+  const [operand1, setOperand1] = useState();
+  const [operand2, setOperand2] = useState();
 
   return (
     <>
       <HpBar hp={hp} setHp={setHp} />
       <EnemyAttack attack={attack} />
       <MainChar hp={hp} />
-      {isCalculating && <CalcModal />}
-      <Hand hand={hand} setHand={setHand} setIsCalculating={setIsCalculating} />
+      {isCalculating && (
+        <CalcModal
+          operator={operator}
+          operand1={operand1}
+          operand2={operand2}
+        />
+      )}
+      <Hand
+        hand={hand}
+        setHand={setHand}
+        isCalculating={isCalculating}
+        setIsCalculating={setIsCalculating}
+        operator={operator}
+        setOperator={setOperator}
+        operand1={operand1}
+        setOperand1={setOperand1}
+        operand2={operand2}
+        setOperand2={setOperand2}
+      />
       <EnemyHp hp={enemyHp} reqs={reqs} />
     </>
   );

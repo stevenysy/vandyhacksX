@@ -175,9 +175,31 @@ ul {
   z-index: 3;
 }
 
+.calc-modal-container {
+  position: absolute;
+  left: 25vw
+}
+
 .calc-modal {
   position: absolute;
   height: 12rem;
   top: 30vh;
-  
+}
+
+.calc-modal-operator {
+  position: absolute;
+  display: inline-block;
+  margin-inline: 2rem;
+  height: 6rem;
+  top: 15rem;
+  left: 11.5rem;
+}
+
+.calc-modal-operand {
+  position: relative;
+  display: inline-block;
+  margin-inline: 6rem;
+  height: 8rem;
+  left: 0rem;
+  top: 14rem;
 }
