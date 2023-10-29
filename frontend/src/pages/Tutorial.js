@@ -4,8 +4,18 @@ import MainChar from "../MainChar";
 import EnemyHp from "../EnemyHp.js";
 import EnemyAttack from "../EnemyAttack.js";
 import { INIT_HP, INIT_ENEMY_HP } from "../config";
+import { fetchCards } from "../utils.js";
 import { useState } from "react";
 import CalcModal from "../CalcModal.js";
+
+try {
+  const data = await fetchCards(7);
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
+
+fetchCards().then((data) => console.log(data));
 
 const Tutorial = () => {
   const [hand, setHand] = useState([1, 2, 1, 2]);
@@ -18,7 +28,7 @@ const Tutorial = () => {
     "div by 3",
   ]);
   const [attack, setAttack] = useState("even num");
-  const [isCalculating, setIsCalculating] = useState(true);
+  const [isCalculating, setIsCalculating] = useState(false);
 
   return (
     <>

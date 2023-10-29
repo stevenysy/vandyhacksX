@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Tutorial from "./pages/Tutorial";
+import { fetchCards } from "./utils";
 
 const Main = () => {
   // const [hand, setHand] = useState([1, 2, 1, 2]);

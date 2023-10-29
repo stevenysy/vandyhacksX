@@ -20,7 +20,7 @@ const EnemyHp = ({ hp, reqs }) => {
             .fill(true)
             .map((_, i) => {
               return (
-                <li className="requirement">
+                <li className="requirement" key={i + 1}>
                   <img
                     src={enemyHeartMask}
                     alt="requirement mask"
@@ -31,7 +31,7 @@ const EnemyHp = ({ hp, reqs }) => {
               );
             })}
         {hp > 0 && (
-          <li className="requirement">
+          <li className="requirement" key={0}>
             <img
               src={enemyHeartMask}
               alt="requirement mask"
