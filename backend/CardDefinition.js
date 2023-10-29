@@ -1,10 +1,10 @@
-
+const VAL_MAX = 99;
+const VAL_MIN = 99;
 
 export class Card {
     constructor(name) {
         this.name = name;
-        this.valMax = 99;
-        this.valMin = 1;
+        this.isOperator = false;
     }
 
     getName() {
@@ -21,11 +21,20 @@ export class NumberCard extends Card {
     getNum() {
         return this.num;
     }
+
+    getName() {
+        if (num >= 10) {
+            return [toString(Math.floor(num/10)), toString(num%10)];
+        } else {
+            return this.name;
+        }
+    }
 }
 
 export class CalculationCard extends Card {
     constructor(name) {
         super(name);
+        this.isOperator = true;
     }
 
     calculation() {return null;}
@@ -50,7 +59,7 @@ export class PlusCard extends CalculationCard {
 
     checkBound(pre, post) {
         newVal = pre.getNum() + post.getNum();
-        return (newVal <= this.valMax);
+        return (newVal <= VAL_MAX);
     }
 }
 
@@ -71,7 +80,7 @@ export class MinusCard extends CalculationCard {
 
     checkBound(pre, post) {
         newVal = pre.getNum() - post.getNum();
-        return (newVal >= this.valMin);
+        return (newVal >= VAL_MIN);
     }
 }
 
@@ -91,11 +100,11 @@ export class MultiplyCard extends CalculationCard {
 
     checkBound(pre, post) {
         newVal = pre.getNum() * post.getNum();
-        return (newVal <= this.valMax);
+        return (newVal <= VAL_MAX);
     }
 }
 
-export class DevideCard extends CalculationCard {
+export class DivideCard extends CalculationCard {
     constructor(pos, name) {
         super(pos, name);
     }
@@ -151,6 +160,6 @@ export class SquareCard extends CalculationCard {
     }
 
     checkBound(pre, post) {
-        return pre.getNum() * pre.getNum() <= this.valMax;
+        return pre.getNum() * pre.getNum() <= VAL_MAX;
     }
 }

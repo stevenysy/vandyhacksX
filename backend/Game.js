@@ -1,18 +1,18 @@
 import * as Hand from "./Hand.js"
+import * as Req from "./Req.js"
 import express from "express";
 
 const myHand = new Hand.Hand;
-myHand.drawNumberCard();
-myHand.drawNumberCard();
-myHand.drawNumberCard();
-myHand.drawCalculationCard();
-myHand.drawCalculationCard();
 
 // const express = require('express');
 
 const app = express();
 
 app.get('/', (request, response) => {
+    const { numCardsNeeded } = request.query;
+    myHand.drawCards(numCardsNeeded);
+    console.log(numCardsNeeded);
+    console.log(myHand);
     response.json(JSON.stringify({
         data: {
             hand: myHand.handCards,
@@ -21,7 +21,7 @@ app.get('/', (request, response) => {
     }));
 });
 
-const port = 3000;
+const port = 8000;
 app.listen(port, () => {
     console.log(`App running on port ${port}...`);
     console.log(myHand)
