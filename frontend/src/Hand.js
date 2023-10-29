@@ -6,7 +6,7 @@ import handRight from "./assets/hand-background-right.png";
  * Generates a new hand by removing the card that has been played
  * @param {Number} index The index of the card to be removed
  */
-const Hand = ({ hand, setHand }) => {
+const Hand = ({ hand, setHand, setIsCalculating }) => {
   const generateNewHand = function (index) {
     const newHand = hand.slice();
     newHand.splice(index, 1);
@@ -28,6 +28,8 @@ const Hand = ({ hand, setHand }) => {
                 whileHover={{ y: -20 }}
                 onClick={() => {
                   console.log(`played card with value ${cardVal}`);
+
+                  // display calculation modal if card played is an operator
 
                   // check if card meets any of the requirements
                   // const numSatisfied = checkReqs(cardVal);
