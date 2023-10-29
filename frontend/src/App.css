@@ -72,3 +72,25 @@ ul {
   top: 8%;
   width: 100vw;
 }
+
+.hp-bar-container {
+  position: absolute;
+  height: 1rem;
+  top: 5%;
+}
+
+.hp-bar-background {
+  height: 5rem;
+}
+
+.hp {
+  position: relative;
+  left: 75px;
+  bottom: 75px;
+}
+
+.heart {
+  float: left;
+  height: 2rem;
+  /* margin-left: 75px; */
+}
