@@ -1,5 +1,6 @@
 import handLeft from "../assets/hand-left.png";
 import handRight from "../assets/hand-background-right.png";
+import Hand from "../Hand.js";
 import { motion } from "framer-motion";
 
 const Tutorial = ({ hand, setHand }) => {
@@ -29,7 +30,6 @@ const Tutorial = ({ hand, setHand }) => {
 
   return (
     <>
-      <h1>Tutorial</h1>
       <div className="hand-container">
         <img className="hand-background-left" src={handLeft} alt="hand left" />
         <img
@@ -37,7 +37,7 @@ const Tutorial = ({ hand, setHand }) => {
           src={handRight}
           alt="hand right"
         />
-        <ul className="hand">
+        {/* <ul className="hand">
           {hand.map((cardVal, index) => {
             return (
               <li className="card" key={index}>
@@ -61,7 +61,8 @@ const Tutorial = ({ hand, setHand }) => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
+        <Hand hand={hand} setHand={setHand} />
       </div>
     </>
   );

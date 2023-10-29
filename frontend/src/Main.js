@@ -1,6 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import card1 from "./assets/cards/card_1.png";
-import card2 from "./assets/cards/card_2.png";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Tutorial from "./pages/Tutorial";
