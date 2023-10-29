@@ -2,11 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import Tutorial from "./pages/Tutorial";
+import { INIT_HP } from "./config";
 import { useState } from "react";
 
 const Main = () => {
   const [hand, setHand] = useState([1, 2, 1, 2]);
-  const [hp, setHp] = useState(5);
+  const [hp, setHp] = useState(INIT_HP);
 
   return (
     <Routes>

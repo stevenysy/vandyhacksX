@@ -1,5 +1,7 @@
 import Hand from "../Hand.js";
 import HpBar from "../HpBar.js";
+import MainChar from "../MainChar";
+import EnemyHp from "../EnemyHp.js";
 
 const Tutorial = ({ hand, setHand, hp, setHp }) => {
   // const reqs = [(num) => num % 2 === 0, (num) => num % 2 !== 0];
@@ -19,7 +21,9 @@ const Tutorial = ({ hand, setHand, hp, setHp }) => {
   return (
     <>
       <HpBar hp={hp} setHp={setHp} />
+      <MainChar hp={hp} />
       <Hand hand={hand} setHand={setHand} />
+      <EnemyHp />
     </>
   );
 };
