@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const Main = () => {
   const [hand, setHand] = useState([1, 2, 1, 2]);
+  const [hp, setHp] = useState(5);
 
   return (
     <Routes>
@@ -14,7 +15,7 @@ const Main = () => {
       <Route
         exact
         path="/tutorial"
-        element={<Tutorial hand={hand} setHand={setHand} />}
+        element={<Tutorial hand={hand} setHand={setHand} hp={hp} />}
         // Component={Tutorial}
       ></Route>
     </Routes>

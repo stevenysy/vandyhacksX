@@ -1,7 +1,7 @@
 import Hand from "../Hand.js";
 import HpBar from "../HpBar.js";
 
-const Tutorial = ({ hand, setHand }) => {
+const Tutorial = ({ hand, setHand, hp, setHp }) => {
   // const reqs = [(num) => num % 2 === 0, (num) => num % 2 !== 0];
 
   // const checkReqs = function (num) {
@@ -18,7 +18,7 @@ const Tutorial = ({ hand, setHand }) => {
 
   return (
     <>
-      <HpBar />
+      <HpBar hp={hp} setHp={setHp} />
       <Hand hand={hand} setHand={setHand} />
     </>
   );
