@@ -3,7 +3,7 @@ import HpBar from "../HpBar.js";
 import MainChar from "../MainChar";
 import EnemyHp from "../EnemyHp.js";
 
-const Tutorial = ({ hand, setHand, hp, setHp }) => {
+const Tutorial = ({ hand, setHand, hp, setHp, enemyHp, reqs }) => {
   // const reqs = [(num) => num % 2 === 0, (num) => num % 2 !== 0];
 
   // const checkReqs = function (num) {
@@ -23,7 +23,7 @@ const Tutorial = ({ hand, setHand, hp, setHp }) => {
       <HpBar hp={hp} setHp={setHp} />
       <MainChar hp={hp} />
       <Hand hand={hand} setHand={setHand} />
-      <EnemyHp />
+      <EnemyHp hp={enemyHp} reqs={reqs} />
     </>
   );
 };

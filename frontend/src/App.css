@@ -111,7 +111,47 @@ ul {
 
 .enemy-heart {
   position: absolute;
-  height: 15rem;
+  height: 13rem;
   right: 7rem;
   bottom: 20px;
+}
+
+.enemy-heart-broken {
+  position: absolute;
+  height: 10rem;
+  right: 5rem;
+  bottom: 30px;
+}
+
+.first-req-mask {
+  position: absolute;
+  width: 20rem;
+  height: 3.2rem;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.req-mask {
+  position: relative;
+  width: 20rem;
+  height: 3.2rem;
+  margin-left: 20rem;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.reqs-list {
+  position: relative;
+  float: inline-end;
+  align-items: center;
+  top: 24.5rem;
+  left: 0;
+  bottom: 0;
+}
+
+.req-name {
+  position: absolute;
+  right: 6.5rem;
+  margin-top: 1rem;
+  z-index: 3;
 }
