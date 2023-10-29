@@ -174,3 +174,10 @@ ul {
   right: 30px;
   z-index: 3;
 }
+
+.calc-modal {
+  position: absolute;
+  height: 12rem;
+  top: 30vh;
+  
+}
